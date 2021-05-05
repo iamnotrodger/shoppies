@@ -12,7 +12,7 @@ export const fetchMovies = (search) => async (dispatch) => {
         const movies = await searchMovies(search);
         dispatch({
             type: MOVIE_ACTION.FETCH_SUCCESS,
-            payload: movies,
+            payload: { movies, search },
         });
     } catch (error) {
         dispatch({

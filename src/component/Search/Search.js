@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import { fetchMovies, updateSearch } from '../../action';
+import { fetchMovies } from '../../action';
 import useDebounce from '../../hook/useDebounce';
 import SearchIcon from './SearchIcon';
 
@@ -22,7 +22,6 @@ const Search = () => {
     const handleChange = (event) => {
         const { value } = event.target;
         fetchMoviesDebounce(value);
-        dispatch(updateSearch(value));
     };
 
     return (
