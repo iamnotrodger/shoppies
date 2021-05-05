@@ -4,6 +4,8 @@ import { fetchMovies } from '../../action';
 import useDebounce from '../../hook/useDebounce';
 import SearchIcon from './SearchIcon';
 
+import './Search.css';
+
 const Search = () => {
     const dispatch = useDispatch();
 
@@ -26,14 +28,19 @@ const Search = () => {
 
     return (
         <div className='search'>
-            <div className='search__icon'>
-                <SearchIcon />
+            <h3 className='search__header'>Movie Title</h3>
+            <div className='search__bar'>
+                <div className='search__icon'>
+                    <SearchIcon />
+                </div>
+                <input
+                    type='text'
+                    className='search__input'
+                    onChange={handleChange}
+                    placeholder='Search for a movie title'
+                    autoFocus
+                />
             </div>
-            <input
-                type='text'
-                className='search__input'
-                onChange={handleChange}
-            />
         </div>
     );
 };
