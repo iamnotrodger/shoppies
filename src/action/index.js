@@ -1,3 +1,3 @@
-export { MOVIE_ACTION, loadMovies } from './movieActions';
+export { MOVIE_ACTION, fetchMovies } from './movieActions';
 export { NOMINEE_ACTION, addNominee, deleteNominee } from './nomineeActions';
 export { SEARCH_ACTION, updateSearch } from './searchActions';

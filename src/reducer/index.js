@@ -5,7 +5,7 @@ import { combineReducers } from 'redux';
 
 const reducer = combineReducers({
     movie: movieReducer,
-    nominee: nomineeReducer,
+    nominees: nomineeReducer,
     search: searchReducer,
 });
 
