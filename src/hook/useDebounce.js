@@ -1,5 +1,5 @@
+import { debounce } from 'lodash';
 import { useCallback } from 'react';
-import debounce from 'lodash.debounce';
 
 const useDebounce = (callback, delay) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps

@@ -1,17 +1,18 @@
+import React from 'react';
+import Search from './component/Search';
+
 import './App.css';
 
-function App() {
+const App = () => {
     return (
-        <div className='App'>
-            <header className='App-header'>
+        <div className='app'>
+            <header className='app__header'>
                 <h1>Shoppies</h1>
-                <p>
-                    A web app to help manage movie nominations for the upcoming
-                    Shoppies.
-                </p>
+                <Search />
             </header>
+            <main className='main'></main>
         </div>
     );
-}
+};
 
 export default App;
