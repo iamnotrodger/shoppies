@@ -1,17 +1,19 @@
 import React from 'react';
 
+import './Movie.css';
+
 const Movie = ({ value, className, disabled, btnTxt, onClick }) => {
-    const { title, year, poster } = value;
+    const { Title, Year, Poster } = value;
 
     return (
         <div className={`movie ${className}`}>
-            {poster ? (
-                <img src={poster} alt='poster' className='movie__poster' />
-            ) : null}
-
+            <div
+                className='movie__poster'
+                style={{ backgroundImage: `url(${Poster})` }}
+            />
             <div className='movie__info'>
-                <h3 className='movie__title'>{title}</h3>
-                <p className='movie__year'>{year}</p>
+                <h3 className='movie__title'>{Title}</h3>
+                <p className='movie__year'>{Year}</p>
             </div>
 
             <button

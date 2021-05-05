@@ -1,3 +1,26 @@
+:root {
+    --font-primary: 'Roboto Condensed', Sans-Serif;
+    --font-secondary: 'Cabin', Sans-Serif;
+
+    --color-grey-dark: #7f7f7f;
+    --color-grey-light: #eaeaea;
+    --color-white: #fff;
+    --color-white-dark: #f2f2f2;
+
+    --color-error: #e54b4b;
+    --color-error-saturated: #ef303b;
+    --color-error-unsaturated: #ff8b8b;
+    --color-success: #17c37b;
+    --color-success-saturated: #20ad65;
+    --color-success-unsaturated: #61bfad;
+
+    --border-radius: 2rem;
+    --border-radius-small: 1rem;
+
+    --shadow-dark: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.3);
+    --shadow-dark-big: 0 0.3rem 0.8rem rgba(0, 0, 0, 0.3);
+}
+
 *,
 *::after,
 *::before {
@@ -13,4 +36,6 @@ html {
 body {
     box-sizing: border-box;
     margin: 0;
+    font-family: var(--font-primary);
+    font-weight: 400;
 }
