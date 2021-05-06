@@ -48,6 +48,8 @@ body {
     box-shadow: var(--shadow-dark-big);
     overflow: hidden;
     min-height: 10rem;
+
+    transition: height 250ms ease;
 }
 
 .movie-container__header {

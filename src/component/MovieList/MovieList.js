@@ -16,12 +16,13 @@ const MovieList = () => {
 
     return (
         <div className='movie-container'>
-            {search ? (
-                <h2 className='movie-container__header'>{`Results for "${search}"`}</h2>
-            ) : null}
+            <h2 className='movie-container__header'>{`Results for "${search}"`}</h2>
             <TransitionGroup className='movie-container__list'>
                 {movies.map((movie) => (
-                    <CSSTransition key={movie.imdbID} timeout={500}>
+                    <CSSTransition
+                        key={movie.imdbID}
+                        timeout={{ appear: 500, enter: 500, exit: 250 }}
+                        classNames='movie-transition'>
                         <Movie
                             value={movie}
                             disabled={isNominated(movie, nominees)}
@@ -37,11 +38,15 @@ const MovieList = () => {
 };
 
 const isNominated = (movie, nominees) => {
-    const index = nominees.findIndex(
-        // eslint-disable-next-line eqeqeq
-        (nominee) => nominee.imdbID == movie.imdbID,
-    );
-    return index > -1 || nominees.length >= 5;
+    if (nominees.length < 5) {
+        const index = nominees.findIndex(
+            // eslint-disable-next-line eqeqeq
+            (nominee) => nominee.imdbID == movie.imdbID,
+        );
+        return index > -1;
+    }
+
+    return true;
 };
 
 export default MovieList;

@@ -72,3 +72,21 @@
 .movie--error > .movie__button {
     background-color: var(--color-error);
 }
+
+.movie-transition-enter {
+    transform: translateX(-75%);
+    opacity: 0;
+}
+.movie-transition-enter-active {
+    transform: translateX(0);
+    opacity: 1;
+    transition: opacity 500ms ease-in, transform 500ms ease;
+    /* transition: all 500ms ease-in; */
+}
+.movie-transition-exit {
+    opacity: 1;
+}
+.movie-transition-exit-active {
+    opacity: 0;
+    transition: opacity 250ms ease-in;
+}
