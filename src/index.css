@@ -39,3 +39,18 @@ body {
     font-family: var(--font-primary);
     font-weight: 400;
 }
+
+.movie-container {
+    position: relative;
+    padding: 2rem;
+    background-color: var(--color-white-dark);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-dark-big);
+    overflow: hidden;
+    min-height: 10rem;
+}
+
+.movie-container__header {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
