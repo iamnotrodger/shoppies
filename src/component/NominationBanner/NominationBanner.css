@@ -1,0 +1,66 @@
+.nomination-banner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    background-color: rgba(0, 0, 0, 0.5);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nomination-banner__content {
+    padding: 5rem;
+    background-color: var(--color-white);
+    border-radius: var(--border-radius);
+    text-align: center;
+}
+
+.nomination-banner__title {
+    font-size: 4.8rem;
+}
+
+.nomination-banner__subtitle {
+    font-size: 1.6rem;
+    font-family: var(--font-secondary);
+    margin-bottom: 2rem;
+}
+
+.nomination-banner__button {
+    width: 100%;
+    font-size: 1.6rem;
+    color: var(--color-white);
+    padding: 1rem 2rem;
+    cursor: pointer;
+    background-color: var(--color-success);
+    border-radius: var(--border-radius);
+    border: none;
+
+    transition: filter 250ms ease;
+}
+
+.nomination-banner__button:hover {
+    filter: saturate(1.5);
+}
+
+.nomination-banner__button:active {
+    filter: saturate(1);
+}
+
+.banner-enter {
+    opacity: 0;
+}
+.banner-enter-active {
+    opacity: 1;
+    transition: opacity 500ms ease;
+}
+.banner-exit {
+    opacity: 1;
+}
+.banner-exit-active {
+    opacity: 0;
+    transition: opacity 500ms ease;
+}
