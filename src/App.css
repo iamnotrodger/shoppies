@@ -1,5 +1,7 @@
 .app {
-    margin: 2rem 5rem;
+    max-width: var(--max-content-width);
+    margin: 0 auto;
+    padding: 2rem;
 }
 
 .app__title {
@@ -12,7 +14,7 @@
 
 .main {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(50rem, 1fr));
     grid-gap: 2rem;
     align-items: start;
 }

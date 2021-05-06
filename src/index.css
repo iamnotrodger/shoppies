@@ -19,6 +19,8 @@
 
     --shadow-dark: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.3);
     --shadow-dark-big: 0 0.3rem 0.8rem rgba(0, 0, 0, 0.3);
+
+    --max-content-width: 1200px;
 }
 
 *,
@@ -55,4 +57,29 @@ body {
 .movie-container__header {
     font-size: 3rem;
     margin-bottom: 2rem;
+}
+
+@media only screen and (max-width: 38em) {
+    .main {
+        grid-template-columns: 1fr;
+    }
+
+    .movie {
+        padding-left: 10rem;
+    }
+
+    .movie__poster {
+        width: 8rem;
+    }
+
+    .movie__title {
+        font-size: 1.6rem;
+    }
+    .movie__year {
+        font-size: 1.4rem;
+    }
+    .movie__button {
+        font-size: 1.4rem;
+        padding: 1rem 1rem;
+    }
 }
