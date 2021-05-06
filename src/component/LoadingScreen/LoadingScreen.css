@@ -1,0 +1,78 @@
+.loading-screen {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+
+    padding-top: 3rem;
+
+    background: rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+
+    --width: 1.5rem;
+    --height: 1.5rem;
+    --bounce-height: 2.5rem;
+}
+
+.loading-screen__text {
+    font-size: 2rem;
+    color: var(--color-white);
+    font-family: var(--font-secondary);
+    line-height: 1;
+    display: inline-block;
+    margin-left: 1rem;
+}
+
+.loading-screen__ball {
+    position: relative;
+    display: inline-block;
+    height: 3rem;
+    width: var(--width);
+}
+
+.loading-screen__ball:before {
+    position: absolute;
+    content: '';
+    display: block;
+    top: 0;
+    width: var(--width);
+    height: var(--height);
+    border-radius: 50%;
+    background-color: var(--color-white);
+    transform-origin: 50%;
+    animation: bounce 500ms alternate infinite ease;
+}
+
+@keyframes bounce {
+    0% {
+        top: var(--bounce-height);
+        height: 0.5rem;
+        border-radius: 6rem 6rem 2rem 2rem;
+        transform: scaleX(2);
+    }
+    35% {
+        height: var(--height);
+        border-radius: 50%;
+        transform: scaleX(1);
+    }
+    100% {
+        top: 0;
+    }
+}
+
+.load-enter {
+    opacity: 0;
+}
+.load-enter-active {
+    opacity: 1;
+    transition: opacity 1000ms ease-in;
+}
+.load-exit {
+    opacity: 1;
+}
+.load-exit-active {
+    opacity: 0;
+    transition: opacity 1000ms ease-in;
+}
