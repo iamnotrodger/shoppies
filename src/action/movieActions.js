@@ -23,12 +23,15 @@ export const fetchMovies = (search) => async (dispatch) => {
 };
 
 const searchMovies = async (search) => {
-    const response = await fetch(
-        `${process.env.REACT_APP_API_URL}&s=${search}&type=movie`,
-    );
+    if (search) {
+        const response = await fetch(
+            `${process.env.REACT_APP_API_URL}&s=${search}&type=movie`,
+        );
 
-    if (!response.ok) return [];
-
-    const { Search } = await response.json();
-    return Search || [];
+        if (response.ok) {
+            const { Search } = await response.json();
+            return Search || [];
+        }
+    }
+    return [];
 };
