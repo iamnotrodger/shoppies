@@ -12,18 +12,19 @@ const updateLocalStorage = (nominees) => {
 
 const addNominee = (nominees, movie) => {
     if (nominees.length < 5) {
-        nominees.push(movie);
+        const index = nominees.findIndex(
+            // eslint-disable-next-line eqeqeq
+            (nominee) => nominee.imdbID == movie.imdbID,
+        );
+
+        if (index < 0) nominees.push(movie);
     }
     return [...nominees];
 };
 
 const deleteNominee = (nominees, movie) => {
-    const index = nominees.findIndex(
-        // eslint-disable-next-line eqeqeq
-        (nominee) => nominee.imdbID == movie.imdbID,
-    );
-    if (index > -1) nominees.splice(index, 1);
-    return [...nominees];
+    // eslint-disable-next-line eqeqeq
+    return nominees.filter((nominee) => nominee.imdbID !== movie.imdbID);
 };
 
 const nomineeReducer = (state = loadNominee(), action) => {
