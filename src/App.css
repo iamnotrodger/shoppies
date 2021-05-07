@@ -5,10 +5,28 @@
 }
 
 .app__title {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 }
 
 .app__header {
+    display: flex;
+    align-items: center;
+}
+
+.app__github {
+    font-size: 2rem;
+    color: var(--color-grey-dark);
+    font-family: var(--font-secondary);
+    text-decoration: none;
+    margin-left: 1rem;
+    transition: all 250ms ease;
+}
+
+.app__github:hover {
+    color: black;
+}
+
+.header {
     margin-bottom: 2rem;
 }
 
